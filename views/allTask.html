@@ -1,0 +1,61 @@
+<html>
+
+<head>
+
+    <style>
+        
+    </style>
+
+</head>
+
+<body>
+
+        <a href=http://localhost:8080>Home</a>
+        <a href=http://localhost:8080/newTask>Add Task</a>
+        <a href=http://localhost:8080/listTasks>List Task</a>
+        <a href=http://localhost:8080/deleteTask>Delete Task</a>
+        <a href=http://localhost:8080/deleteComplete>Delete Complete</a>
+        <a href=http://localhost:8080/updateTask>Update Task</a>
+
+    <div class = "container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Task ID</th>
+                    <th>Task Name</th>
+                    <th>Assigned To</th>
+                    <th>Due Date</th>
+                    <th>Task Status</th>
+                    <th>Task Description</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+            <% for(let i=0;i<tasks.length;i++){ %>        
+            <tr>
+                <td>
+                    <%= tasks[i]["task_id"] %>
+                    </td>
+                <td>
+                    <%= tasks[i]["task_name"] %>
+                </td>
+                <td>
+                    <%= tasks[i]["assign_to"] %>
+                </td>
+                <td>
+                    <%= tasks[i]["due_date"] %>
+                </td>
+                <td>
+                    <%= tasks[i]["task_status"] %>
+                </td>
+                <td>
+                    <%= tasks[i]["task_desc"] %>
+                </td>
+            </tr>
+            <%} %>
+            </tbody>   
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<html>
+
+<body>
+
+        <a href=http://localhost:8080>Home</a>
+        <a href=http://localhost:8080/newTask>Add Task</a>
+        <a href=http://localhost:8080/listTasks>List Task</a>
+        <a href=http://localhost:8080/deleteTask>Delete Task</a>
+        <a href=http://localhost:8080/deleteComplete>Delete Complete</a>
+        <a href=http://localhost:8080/updateTask>Update Task</a>
+
+    <form action="/newTask" method="POST">
+
+        Task Name: <input type="text" name="taskName" /><br>
+        Assigned To: <input type="text" name="assignTo" /><br>
+        Due Date: <input type="text" name="dueDate" /><br>
+        Task Status: <input type="text" name="taskStatus" /><br>
+        Task Description: <input type="text" name="taskDesc" /><br>
+        
+        <button>Submit</button>
+
+    </form>
+</body>
+
+</html>
